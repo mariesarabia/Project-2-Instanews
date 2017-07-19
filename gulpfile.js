@@ -14,7 +14,6 @@ gulp.task('scripts', ['lint'], function () {
         .pipe(uglify()) //call the uglify function on the files
         .pipe(rename({ extname: '.min.js' })) // rename uglified file 
         .pipe(gulp.dest('./build/js'))
-        .pipe(gulp - eslint)()
 });
 
 // Gulp Say Hello Task
@@ -44,10 +43,6 @@ gulp.task('lint', function () {
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
-});
-
-gulp.task('default', ['lint'], function () {
-    // This will only run if the lint task is successful... 
 });
 
 //Gulp Default Task
