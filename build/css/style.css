@@ -96,17 +96,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .main-container header h1 {
+    color: white; }
+  .main-container footer {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem; }
 
 .sections {
   width: 100%;
   font-size: 2rem;
   color: white; }
-
-header h1 {
-  color: white; }
-
-footer {
-  font-family: 'Open Sans';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1rem; }
