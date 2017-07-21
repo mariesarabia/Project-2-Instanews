@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js"> <!--<![endif]-->
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,25 +8,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="build/css/style.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/51fc2a48da.js"></script>
     </head>
     <body>
+         <div class="main-container">
        <header>
-           <div class="logo"><img src="./assets/images/nyt-logo.svg" alt="nyt-logo"></div>
-           <p>Choose a section:></p>
-           <div class="sections">
-               <select>
-                   <option>Sections</option>
-                   <option>Home</option>
-                   <option>Arts</option>
-                   <option>Business</option>
-                   <option>Sports</option>
-                   <option>Technology</option>
-                   <option>Fashion</option>
-               </select>    
+           <div class="logo">
+               <img src="assets/images/nyt-logo.svg" alt="nyt-logo">
            </div>
-           <footer><p>© Copyright 2016 <span>Instanews</span></p></footer>
-       </header>
+           <nav>
+                <p>Choose a section:</p>
+                    <div class="sections">
+                        <select id="select">
+                            <option value="value1">Sections</option>
+                            <option value="value2">Home</option>
+                            <option value="value3">Arts</option>
+                            <option value="value4">Business</option>
+                            <option value="value5">Sports</option>
+                            <option value="value6">Technology</option>
+                            <option value="value7">Fashion</option>
+                        </select> 
+                    </div>
+            </nav>   
+        </header>
+        <div class="grid-stories"></div> 
+        <footer><p>© Copyright 2016 <span>Instanews</span></p></footer>
         <script src="build/js/scripts.min.js"></script>
+       </div> <!-- closing main-container -->
     </body>
 </html>
 
