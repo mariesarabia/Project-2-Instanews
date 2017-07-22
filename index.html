@@ -11,6 +11,7 @@
         <script src="https://use.fontawesome.com/51fc2a48da.js"></script>
     </head>
     <body>
+
          <div class="main-container">
        <header>
            <div class="logo">
@@ -19,19 +20,21 @@
            <nav>
                 <p>Choose a section:</p>
                     <div class="sections">
-                        <select id="select">
-                            <option value="value1">Sections</option>
-                            <option value="value2">Home</option>
-                            <option value="value3">Arts</option>
-                            <option value="value4">Business</option>
-                            <option value="value5">Sports</option>
-                            <option value="value6">Technology</option>
-                            <option value="value7">Fashion</option>
+                        <select id="select-section">
+                            <option value="" disabled selected>Sections</option>
+                            <option value="home">Home</option>
+                            <option value="arts">Arts</option>
+                            <option value="business">Business</option>
+                            <option value="sports">Sports</option>
+                            <option value="technology">Technology</option>
+                            <option value="fashion">Fashion</option>
                         </select> 
                     </div>
             </nav>   
         </header>
-        <div class="grid-stories"></div> 
+        <section class="grid-stories">
+            <ul></ul>
+        </section> 
         <footer><p>© Copyright 2016 <span>Instanews</span></p></footer>
         <script src="build/js/scripts.min.js"></script>
        </div> <!-- closing main-container -->
