@@ -1,9 +1,11 @@
 $(document).ready( function () {
 
-$('select-section').on('change', function (){
-    var selectedSection = this.value;
+    //change event fires when the user selects a value from the dropdown with a mouse click
+    $('#select-section').on('change', function () {
+        
+        var selectedSection = this.value; //this.value represents the selected section
 
-    var url = "https://api.nytimes.com/svc/topstories/v2/" + selectedSection + ".json";
+        var url = "https://api.nytimes.com/svc/topstories/v2/" + selectedSection + ".json";
             url += '?' + $.param({      
             'api-key': "a40deeadfb074dcb9a3b5ac209821856",  
             });

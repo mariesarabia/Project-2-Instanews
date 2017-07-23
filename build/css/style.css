@@ -107,4 +107,13 @@ body {
 .sections {
   width: 100%;
   font-size: 2rem;
-  color: white; }
+  color: white;
+  max-width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
