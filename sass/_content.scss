@@ -27,14 +27,25 @@ body {
 
 }
 
-.sections {
-    width: 100%;
-    font-size: 2rem; 
+.grid-stories ul {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem; 
     color: white;
 	max-width: 100%;
 	height: auto;
 	display: flex;
-	flex-flow: row wrap;
+    flex-flow: row wrap;
+        li {
+            article {
+                max-width: 100%;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 420px;
+            }
+        }
 }
 
 
