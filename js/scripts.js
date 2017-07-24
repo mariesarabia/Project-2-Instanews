@@ -39,7 +39,7 @@ $(document).ready( function () {
         var articleAbstract = newsStory.abstract;
         var articleImage = newsStory.multimedia[4].url;
 
-        $('.grid-stories ul').append('<li><article style="background-image:url(' + articleImage + ')">'+ articleAbstract + '</article></li>');
+        $('.grid-stories ul').append('<li><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay">' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></li>');
         }
             });
         });

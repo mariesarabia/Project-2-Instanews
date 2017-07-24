@@ -37,6 +37,7 @@ body {
 	height: auto;
 	display: flex;
     flex-flow: row wrap;
+
         li {
             article {
                 max-width: 100%;
@@ -44,7 +45,25 @@ body {
                 background-position: center center;
                 background-repeat: no-repeat;
                 height: 420px;
+                display: flex;
+                padding: 5px;
+
+                .overlay {
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+                    align-self: flex-end;
+                    padding: 20px;
+
+                    p {
+                        bottom: 0px;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                        
+                    }
+                }
+
+                    
             }
+
         }
 }
 
