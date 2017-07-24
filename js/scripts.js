@@ -33,7 +33,7 @@ $(document).ready( function () {
 
             console.log(newsStoryWithImages);
             
-            $.each(newsStoryWithImages, function(index, newsStory) {
+        $.each(newsStoryWithImages, function(index, newsStory) {
 
     if (index < 12 ){ 
         var articleAbstract = newsStory.abstract;

@@ -95,7 +95,8 @@ table {
   .main-container footer {
     font-weight: 300;
     font-style: normal;
-    font-size: 1rem; }
+    font-size: 1rem;
+    color: #c2c2c2; }
     .main-container footer span {
       text-transform: uppercase; }
 
@@ -113,20 +114,20 @@ table {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   text-decoration: none; }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     .grid-stories ul li {
       -webkit-box-flex: 1;
           -ms-flex: 1 0 50%;
               flex: 1 0 50%; } }
-  @media screen and (min-width: 1240px) {
+  @media (min-width: 1000px) {
     .grid-stories ul li {
       -webkit-box-flex: 1;
           -ms-flex: 1 0 25%;
               flex: 1 0 25%; } }
-  .grid-stories ul li a {
+  .grid-stories ul a {
     text-decoration: none;
     color: white; }
-  .grid-stories ul li article {
+  .grid-stories ul article {
     max-width: 100%;
     background-size: cover;
     background-position: center center;
@@ -135,12 +136,12 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .grid-stories ul li article .overlay {
+    .grid-stories ul article .overlay {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
       -ms-flex-item-align: end;
           align-self: flex-end; }
-      .grid-stories ul li article .overlay p {
+      .grid-stories ul article .overlay p {
         bottom: 0px;
         font-size: 1rem;
         line-height: 1.2rem;
