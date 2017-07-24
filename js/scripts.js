@@ -31,21 +31,22 @@ $(document).ready( function () {
                 return newsStory.multimedia.length !== 0;
             });
 
-            console.log(newsStoryWithImages);
+            // console.log(newsStoryWithImages);
             
             $.each(newsStoryWithImages, function(index, newsStory) {
 
     if (index < 12 ){ 
         var articleAbstract = newsStory.abstract;
-        var articleUrl = newsStory.url;
+        var articleUrl = newsStory.short_url;
         var articleImage = newsStory.multimedia[4].url;
 
-        $('.grid-stories ul').append('<li><a href="(' + articleUrl + ')"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay">' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></a></li>');
+        console.log(articleUrl);
+
+        $('.grid-stories ul').append('<li><a href="' + articleUrl + '"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay" >' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></a></li>');
         }
             });
         });
     });
-
 
 
 }); //end of doc.ready
