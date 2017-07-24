@@ -3,11 +3,11 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    // height: 500px;
     align-items: center;
         
     header {
-            
+        margin: 0 auto;
         h1 {
             color: white;
             }
@@ -36,13 +36,15 @@
     
         li {
             
-
-            @media screen and (min-width: 600px) {
+            
+            @include tablet {
             flex: 1 0 50%;
             }
 
-            @media screen and (min-width: 1240px) {
-            flex: 1 0 25%;
+            @include desktop {
+                flex: 1 0 25%;
+            }
+            
             
         }
 
@@ -67,7 +69,7 @@
 
                     p {
                         bottom: 0px;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         line-height: 1.2rem;
                         height: auto;
                         padding: 10px;
