@@ -37,9 +37,10 @@ $(document).ready( function () {
 
     if (index < 12 ){ 
         var articleAbstract = newsStory.abstract;
+        var articleUrl = newsStory.url;
         var articleImage = newsStory.multimedia[4].url;
 
-        $('.grid-stories ul').append('<li><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay">' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></li>');
+        $('.grid-stories ul').append('<li><a href="(' + articleUrl + ')"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay">' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></a></li>');
         }
             });
         });
