@@ -104,6 +104,25 @@ table {
     max-width: 100%;
     width: 100%;
     height: 580px; }
+    .main-container header.header-transform {
+      place-content: center;
+      height: auto;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto;
+      max-width: 600px; }
+      .main-container header.header-transform img {
+        height: 50%;
+        width: 50%; }
+      @media (min-width: 1000px) {
+        .main-container header.header-transform {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; } }
     @media (min-width: 600px) {
       .main-container header {
         -webkit-box-align: center;
@@ -116,7 +135,7 @@ table {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        height: 580px;
+        height: 600px;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; } }
@@ -135,13 +154,8 @@ table {
     .main-container footer span {
       text-transform: uppercase; }
     @media (min-width: 1000px) {
-      .main-container footer {
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start; } }
-
-.header-transform {
-  height: auto; }
+      .main-container footer p {
+        text-align: left; } }
 
 .sections.form {
   width: 300px;
@@ -158,12 +172,12 @@ table {
   @media (min-width: 600px) {
     .logo {
       width: 300px; } }
-  @media (min-width: 1000px) {
-    .logo img {
-      margin-left: auto; } }
 
 .logo-transform {
   width: 300px; }
+  @media (min-width: 1000px) {
+    .logo-transform {
+      text-align: left; } }
 
 @media (min-width: 600px) {
   .logo-transform img {
@@ -227,7 +241,8 @@ select {
   width: 40px;
   height: 40px;
   margin: 0 auto;
-  position: fixed; }
+  position: fixed;
+  display: none; }
 
 * {
   -webkit-box-sizing: border-box;

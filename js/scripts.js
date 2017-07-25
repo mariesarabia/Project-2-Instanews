@@ -5,8 +5,13 @@ $(document).ready( function () {
         
         var selectedSection = this.value; //this.value represents the selected section
 
-        if(this.value != 'Sections...') {
-            $('.main-container').addClass('loader')}
+        if( selectedSection != '') {
+            $('.main-container').addClass('loader');
+            $('header').addClass('header-transform');
+        } else {
+            $('.main-container').removeClass('loader');
+            $('header').removeClass('header-transform');
+        }
         
 
         //adding parameters to url:
