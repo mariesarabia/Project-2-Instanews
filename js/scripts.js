@@ -12,10 +12,10 @@ $(document).ready( function () {
             'api-key': "a40deeadfb074dcb9a3b5ac209821856",  
             });
 
-            //empty the grid-stories list each time a section is selected: 
-            $('.grid-stories ul').html('');  
+        //empty the grid-stories list each time a section is selected: 
+        $('.grid-stories ul').html('');  
         
-        //retrieve data from the server; ajax is used to perform an asyncrhonous http request - GET   
+        //retrieve data from the server; ajax is used to perform an asynchronous http request - GET   
         $.ajax({
         url: url,
         method: 'GET',
@@ -29,21 +29,23 @@ $(document).ready( function () {
             //.filter method constructs a new jQuery object from matching subset of only news stories with images
             var newsStoryWithImages = results.filter(function(newsStory){
                 return newsStory.multimedia.length !== 0;
-            });
+            }); //multimedia is an array so can use .length
 
             console.log(newsStoryWithImages);
             
-        $.each(newsStoryWithImages, function(index, newsStory) {
+            $.each(newsStoryWithImages, function(index, newsStory) {
 
-    if (index < 12 ){ 
-        var articleAbstract = newsStory.abstract;
-        var articleUrl = newsStory.short_url;
-        var articleImage = newsStory.multimedia[4].url;
 
-        // console.log(articleUrl);
+                if (index < 12 ){ 
+                    var articleAbstract = newsStory.abstract;
+                    var articleUrl = newsStory.short_url;
+                    var articleImage = newsStory.multimedia[4].url;
 
-        $('.grid-stories ul').append('<li><a target="_blank" href="' + articleUrl + '"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay" >' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></a></li>');
-        }
+                // console.log(articleUrl);
+
+                    //populate the grid by inserting needed content -- images, abstract, overlay -- using the append method:
+                    $('.grid-stories ul').append('<li><a target="_blank" href="' + articleUrl + '"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay" >' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></a></li>');
+                    }
             });
         });
     });
