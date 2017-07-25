@@ -3,8 +3,11 @@ $(document).ready( function () {
     //change event fires when the user selects a value from the dropdown with a mouse click
     $('#select-section').on('change', function () {
         
-        
         var selectedSection = this.value; //this.value represents the selected section
+
+        if(this.value != 'Sections...') {
+            $('.main-container').addClass('loader')}
+        
 
         //adding parameters to url:
         var url = "https://api.nytimes.com/svc/topstories/v2/" + selectedSection + ".json";
@@ -33,6 +36,8 @@ $(document).ready( function () {
 
             console.log(newsStoryWithImages);
             
+            $('.main-container').removeClass("loader");
+
             $.each(newsStoryWithImages, function(index, newsStory) {
 
 
