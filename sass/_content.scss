@@ -121,7 +121,7 @@ select {
     font-weight: 300;
     font-style: normal;
     font-size: 1rem; 
-	max-width: 100%;
+    max-width: 100%;
 	height: auto;
 	display: flex;
     flex-flow: row wrap;
@@ -131,6 +131,7 @@ select {
     
         li {
             
+            width: 100%;
             @include tablet {
             flex: 1 0 50%;
             }
