@@ -1,5 +1,5 @@
 // Requiring packages
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     watch = require('gulp-watch'),
@@ -8,14 +8,17 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename');
-    prettyError = require('gulp-prettyerror')
+    prettyError = require('gulp-prettyerror'),
+    babel = require('gulp-babel');
 
 // GULP TASKS BELOW
 
 // Gulp Scripts Task with lint added as a dependency
 gulp.task('scripts', ['lint'], function () {
     gulp.src('./js/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(uglify()) //call the uglify function on the files
         .pipe(rename({ extname: '.min.js' })) // rename uglified file 
         .pipe(gulp.dest('./build/js'))
