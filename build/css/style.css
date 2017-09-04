@@ -77,18 +77,19 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%; }
   .main-container header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -100,24 +101,28 @@ table {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    padding: 2rem;
     max-width: 100%;
     width: 100%;
-    height: 580px; }
+    height: 100%;
+    padding: 2rem; }
     .main-container header.header-transform {
-      place-content: center;
-      height: auto;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
       -webkit-box-flex: 1;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto;
-      max-width: 600px; }
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      max-width: 600px;
+      height: auto; }
       .main-container header.header-transform img {
-        height: 50%;
-        width: 50%; }
-      @media (min-width: 1000px) {
+        width: 50%;
+        height: 50%; }
+      @media (min-width: 1240px) {
         .main-container header.header-transform {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
@@ -130,17 +135,17 @@ table {
                 align-items: center;
         width: 100%;
         height: 300px; } }
-    @media (min-width: 1000px) {
+    @media (min-width: 1240px) {
       .main-container header {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        height: 600px;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; } }
+                align-items: center;
+        height: 600px; } }
     .main-container header h1 {
-      color: white; }
+      color: #ffffff; }
     .main-container header p {
       font-size: 0.9rem; }
   .main-container footer {
@@ -153,7 +158,7 @@ table {
             justify-content: flex-end; }
     .main-container footer span {
       text-transform: uppercase; }
-    @media (min-width: 1000px) {
+    @media (min-width: 1240px) {
       .main-container footer p {
         text-align: left; } }
 
@@ -175,7 +180,7 @@ table {
 
 .logo-transform {
   width: 300px; }
-  @media (min-width: 1000px) {
+  @media (min-width: 1240px) {
     .logo-transform {
       text-align: left; } }
 
@@ -209,14 +214,9 @@ select {
         -webkit-box-flex: 1;
             -ms-flex: 1 0 50%;
                 flex: 1 0 50%; } }
-    @media (min-width: 1000px) {
-      .grid-stories ul li {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 0 25%;
-                flex: 1 0 25%; } }
   .grid-stories ul a {
     text-decoration: none;
-    color: white; }
+    color: #ffffff; }
   .grid-stories ul article {
     width: 100%;
     background-size: cover;
@@ -228,22 +228,22 @@ select {
     display: flex; }
 
 .overlay {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   -ms-flex-item-align: end;
-      align-self: flex-end; }
+      align-self: flex-end;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); }
   .overlay p {
-    bottom: 0px;
-    font-size: 1rem;
-    line-height: 1.2rem;
     height: auto;
-    padding: 10px; }
+    bottom: 0px;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.2rem; }
 
 .loader {
+  position: fixed;
   width: 40px;
   height: 40px;
   margin: 0 auto;
-  position: fixed;
   display: none; }
 
 * {
@@ -257,5 +257,5 @@ body {
   background-color: black;
   color: #ffffff;
   font-size: 16px;
-  color: white;
+  color: #ffffff;
   height: auto; }
