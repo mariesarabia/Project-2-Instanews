@@ -117,6 +117,9 @@ select {
         @include tablet {
             flex: 1 0 50%;
         }
+        @include desktop {
+            flex: 1 0 25%;
+        }
     }
     a {
         text-decoration: none;
