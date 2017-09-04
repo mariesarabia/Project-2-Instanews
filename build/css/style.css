@@ -214,6 +214,11 @@ select {
         -webkit-box-flex: 1;
             -ms-flex: 1 0 50%;
                 flex: 1 0 50%; } }
+    @media (min-width: 1240px) {
+      .grid-stories ul li {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 25%;
+                flex: 1 0 25%; } }
   .grid-stories ul a {
     text-decoration: none;
     color: #ffffff; }
