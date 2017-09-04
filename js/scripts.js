@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     //change event fires when the user selects a value from the dropdown with a mouse click
     $('#select-section').on('change', function() {
@@ -12,7 +12,6 @@ $(document).ready(function() {
             $('.main-container').removeClass('loader');
             $('header').removeClass('header-transform');
         }
-
 
         //adding parameters to url:
         let url = "https://api.nytimes.com/svc/topstories/v2/" + selectedSection + ".json";
