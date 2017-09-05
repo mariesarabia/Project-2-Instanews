@@ -24,4 +24,4 @@ Through this project, I learned:
 
 * Implementing automation tasks such as uglification, watch and browser-sync.
 
-* Structure Sass files and implement Sass techniques.
+* How to structure Sass files and implement Sass techniques.

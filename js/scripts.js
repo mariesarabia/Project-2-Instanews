@@ -50,7 +50,15 @@ $(function () {
                         $('.grid-stories ul').append('<li><a target="_blank" href="' + articleUrl + '"><article style="background-image:url(' + articleImage + ')">' + '<div class="overlay" >' + '<p>' + articleAbstract + '</p>' + '</div>' + '</article></a></li>');
                     }
                 });
-            });
+            })
+
+            .fail(function() {
+                alert("Please try again");
+                location.reload();
+              })
+            .always(function() {
+                loader();
+              });
     });
 
 
