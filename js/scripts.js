@@ -6,13 +6,19 @@ $(function () {
 
     loader();
 
+    let clickcount = 0;
+    
     $('#select-section').on('change', function () {
 
         loader();
 
         let selectedSection = this.value; //this.value represents the selected section
+        
 
+        if (clickcount === 0) {
         $('header').toggleClass('header-transform');
+        clickcount++; 
+    }
 
         //adding parameters to url:
         let url = "https://api.nytimes.com/svc/topstories/v2/" + selectedSection + ".json";
