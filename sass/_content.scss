@@ -1,0 +1,165 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100vw;
+    max-height: fit-content;
+    height: 100vh;
+    
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        
+        @include tablet {
+            align-items: center;
+            width: 100%;
+            height: 300px;
+        }
+        @include desktop {
+            justify-content: flex-start;
+            align-items: center;
+            height: 600px;
+        }
+        h1 {
+            color: $primary-color;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .header-transform {
+        flex: 1 0 auto;
+        align-items: flex-start;
+        justify-content: center;
+        align-content: center;
+        max-width: 600px;
+        height: auto;
+        img {
+            width: 50%;
+            height: 50%;
+        }
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+    
+    footer {
+        font-weight: 300;
+        font-style: normal;
+        font-size: 0.9rem;
+        color: $footer-text;
+        text-align: left;
+        padding-bottom: 3rem;
+        span {
+            text-transform: uppercase;
+        }
+        p {
+            @include desktop {
+                justify-content: flex-start;
+                 padding-right: 62rem;
+                 padding-bottom: 4.2rem;
+            }
+        }
+    }
+}
+
+.sections.form {
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 1rem;
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.logo {
+    width: 300px;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include tablet {
+        width: 250px;
+    }
+}
+
+.logo-transform {
+    width: 300px;
+    @include desktop {
+        text-align: left;
+    }
+}
+
+.logo-transform img {
+    @include tablet {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+select {
+    font-size: 1.1rem;
+}
+
+.grid-stories ul {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    li {
+        width: 100%;
+
+        @include tablet {
+            flex: 1 0 50%;
+        }
+
+        @include desktop {
+            flex: 1 0 25%;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primary-color;
+    }
+    article {
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 420px;
+        display: flex;
+    }
+}
+
+.overlay {
+    align-self: flex-end;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50));
+    p {
+        height: auto;
+        bottom: 0px;
+        padding: 10px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.loader {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: none;
+}
