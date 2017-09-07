@@ -4,8 +4,10 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    max-height: fit-content;
+    height: 100vh;
+
     
     header {
         display: flex;
@@ -63,6 +65,8 @@
         p {
             @include desktop {
                 justify-content: flex-start;
+                 padding-right: 62rem;
+                 padding-bottom: 4.2rem;
             }
         }
     }
@@ -83,7 +87,8 @@
     text-align: center;
     margin-bottom: 1rem;
     @include tablet {
-        width: 300px;
+        width: 250px;
+
     }
 }
 
