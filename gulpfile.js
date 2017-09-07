@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     watch = require('gulp-watch'),
     gulp = require('gulp'),
+
     eslint = require('gulp-eslint'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -34,6 +35,7 @@ return gulp.src(['./js/*.js'])
 });
 
 // Gulp Task Sass
+
 gulp.task('sass', function() {
    gulp.src('./sass/style.scss')
       .pipe(prettyError())
@@ -46,6 +48,7 @@ gulp.task('sass', function() {
       .pipe(rename('style.min.css'))
       .pipe(gulp.dest('./build/css'));
 });
+
 
 //Reload browser
 gulp.task('browser-sync', function() {
@@ -66,4 +69,5 @@ gulp.task('watch', function(){
 
 //Gulp default task (always at the bottom)
 gulp.task('default', ['watch', 'browser-sync']); 
+
 
